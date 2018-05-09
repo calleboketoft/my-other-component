@@ -18,7 +18,7 @@ export class MyOtherComponent {
 
   doSomeBeeping () {
     setInterval(() => {
-      this.beeper.emit({'advanced': 'object!'});
+      this.beeper.emit({'advanced': 'object!', 'listhere': [1,2,3]});
     }, 1000);
   }
 
