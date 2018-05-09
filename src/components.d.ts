@@ -54,6 +54,7 @@ declare global {
     export interface MyOtherComponentAttributes extends HTMLAttributes {
       'first'?: string;
       'last'?: string;
+      'onBeeper'?: (event: CustomEvent) => void;
     }
   }
 }
