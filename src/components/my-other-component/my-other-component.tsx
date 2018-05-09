@@ -18,8 +18,7 @@ export class MyOtherComponent {
 
   doSomeBeeping () {
     setInterval(() => {
-      console.log('test')
-      this.beeper.emit('beep!');
+      this.beeper.emit({'advanced': 'object!'});
     }, 1000);
   }
 
