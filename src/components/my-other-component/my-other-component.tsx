@@ -16,6 +16,10 @@ export class MyOtherComponent {
     this.doSomeBeeping();
   }
 
+  propDidChange (){
+    console.log('ok')
+  }
+
   doSomeBeeping () {
     setInterval(() => {
       this.beeper.emit({'advanced': 'object!', 'listhere': [1,2,3]});
