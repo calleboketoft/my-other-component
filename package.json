@@ -2,9 +2,10 @@
   "name": "my-other-component",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
-  "main": "dist/myothercomponent.js",
+  "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
+  "module": "dist/esm/index.js",
   "files": [
     "dist/"
   ],
@@ -19,7 +20,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@stencil/core": "^0.8.0",
+    "@stencil/core": "^0.9.0-0",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
