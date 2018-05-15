@@ -12,26 +12,29 @@ export class MyOtherComponent {
 
   @Event() beeper: EventEmitter;
 
+  render() {
+    return (
+      <div>
+        Second plugin, called {this.first} {this.last}
+        <br />
+        <button onClick={ (event: UIEvent) => this.handleClick(event) }>
+          Click me
+        </button>
+      </div>
+    );
+  }
+
   componentDidLoad() {
-    this.doSomeBeeping();
+    console.log('inited')
   }
 
   propDidChange (){
     console.log('ok')
   }
 
-  doSomeBeeping () {
-    setInterval(() => {
-      this.beeper.emit({'advanced': 'object!', 'listhere': [1,2,3]});
-      console.log(this.first)
-    }, 1000);
-  }
-
-  render() {
-    return (
-      <div>
-        Second plugin, called {this.first} {this.last}
-      </div>
-    );
+  handleClick (event) {
+    this.beeper.emit({'advanced': 'object!', 'listhere': [1,2,3]});
+    console.log(this.first)
+    console.log(event)
   }
 }
