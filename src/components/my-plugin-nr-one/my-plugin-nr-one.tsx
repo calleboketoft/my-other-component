@@ -20,6 +20,8 @@ export class MyOtherComponent {
         <button onClick={ (event: UIEvent) => this.handleClick(event) }>
           Click me!
         </button>
+        <br />
+        <child-component name="works great"></child-component>
       </div>
     );
   }

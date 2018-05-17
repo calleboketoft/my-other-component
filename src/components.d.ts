@@ -27,6 +27,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface ChildComponent {
+      'name': string;
+    }
+  }
+
+  interface HTMLChildComponentElement extends StencilComponents.ChildComponent, HTMLStencilElement {}
+
+  var HTMLChildComponentElement: {
+    prototype: HTMLChildComponentElement;
+    new (): HTMLChildComponentElement;
+  };
+  interface HTMLElementTagNameMap {
+    'child-component': HTMLChildComponentElement;
+  }
+  interface ElementTagNameMap {
+    'child-component': HTMLChildComponentElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'child-component': JSXElements.ChildComponentAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ChildComponentAttributes extends HTMLAttributes {
+      'name'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface MyPluginNrOne {
       'first': string;
       'last': string;
