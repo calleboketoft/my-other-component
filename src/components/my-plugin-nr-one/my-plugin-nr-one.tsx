@@ -18,7 +18,7 @@ export class MyOtherComponent {
         Second plugin, called {this.first} {this.last}
         <br />
         <button onClick={ (event: UIEvent) => this.handleClick(event) }>
-          Click me! or something
+          Click me!
         </button>
       </div>
     );
