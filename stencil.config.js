@@ -1,5 +1,5 @@
 exports.config = {
-  namespace: 'myothercomponent',
+  namespace: 'mypluginnrone',
   outputTargets:[
     {
       type: 'dist'

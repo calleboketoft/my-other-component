@@ -27,31 +27,31 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface MyOtherComponent {
+    interface MyPluginNrOne {
       'first': string;
       'last': string;
     }
   }
 
-  interface HTMLMyOtherComponentElement extends StencilComponents.MyOtherComponent, HTMLStencilElement {}
+  interface HTMLMyPluginNrOneElement extends StencilComponents.MyPluginNrOne, HTMLStencilElement {}
 
-  var HTMLMyOtherComponentElement: {
-    prototype: HTMLMyOtherComponentElement;
-    new (): HTMLMyOtherComponentElement;
+  var HTMLMyPluginNrOneElement: {
+    prototype: HTMLMyPluginNrOneElement;
+    new (): HTMLMyPluginNrOneElement;
   };
   interface HTMLElementTagNameMap {
-    'my-other-component': HTMLMyOtherComponentElement;
+    'my-plugin-nr-one': HTMLMyPluginNrOneElement;
   }
   interface ElementTagNameMap {
-    'my-other-component': HTMLMyOtherComponentElement;
+    'my-plugin-nr-one': HTMLMyPluginNrOneElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'my-other-component': JSXElements.MyOtherComponentAttributes;
+      'my-plugin-nr-one': JSXElements.MyPluginNrOneAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyOtherComponentAttributes extends HTMLAttributes {
+    export interface MyPluginNrOneAttributes extends HTMLAttributes {
       'first'?: string;
       'last'?: string;
       'onBeeper'?: (event: CustomEvent) => void;

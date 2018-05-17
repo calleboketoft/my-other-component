@@ -1,8 +1,8 @@
 import { Component, Prop, Event, EventEmitter } from '@stencil/core';
 
 @Component({
-  tag: 'my-other-component',
-  styleUrl: 'my-other-component.css',
+  tag: 'my-plugin-nr-one',
+  styleUrl: 'my-plugin-nr-one.css',
   shadow: true
 })
 export class MyOtherComponent {

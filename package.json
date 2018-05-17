@@ -1,5 +1,5 @@
 {
-  "name": "my-other-component",
+  "name": "my-plugin-nr-one",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
   "files": [
     "dist/"
   ],
-  "browser": "dist/myothercomponent.js",
+  "browser": "dist/mypluginnrone.js",
   "scripts": {
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
