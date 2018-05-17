@@ -8,6 +8,9 @@ exports.config = {
       type: 'www',
       serviceWorker: false,
       buildDir: '../..'
+    },
+    {
+      type: 'www'
     }
   ]
 };
