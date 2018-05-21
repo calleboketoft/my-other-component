@@ -1,21 +1,15 @@
-import { Component, Prop, Event, EventEmitter } from '@stencil/core';
+import { Component } from '@stencil/core';
 
 @Component({
   tag: 'my-plugin-nr-one',
   styleUrl: 'my-plugin-nr-one.css',
   shadow: true
 })
-export class MyOtherComponent {
-
-  @Prop() first: string;
-  @Prop() last: string;
-
-  @Event() beeper: EventEmitter;
-
+export class MyPluginNrOneComponent {
   render() {
     return (
       <div>
-        Second plugin, called {this.first} {this.last}
+        Plugin nr one here
         <br />
         <button onClick={ (event: UIEvent) => this.handleClick(event) }>
           Click me!
@@ -30,13 +24,7 @@ export class MyOtherComponent {
     console.log('inited')
   }
 
-  propDidChange (){
-    console.log('ok')
-  }
-
   handleClick (event) {
-    this.beeper.emit({'advanced': 'object!', 'listhere': [1,2,3]});
-    console.log(this.first)
     console.log(event)
   }
 }
