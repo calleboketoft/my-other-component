@@ -21,10 +21,15 @@ export class MyPluginNrOneComponent {
   }
 
   componentDidLoad() {
-    console.log('inited')
+    console.log('registering plugin callback for "my-plugin-nr-one"')
+    window['platformPluginComm'].registerPluginDataCallback('my-plugin-nr-one', this.dataFromPlatform.bind(this))
   }
 
   handleClick (event) {
     console.log(event)
+  }
+
+  dataFromPlatform (data) {
+    console.log('Data received from platform in plugin one', data)
   }
 }

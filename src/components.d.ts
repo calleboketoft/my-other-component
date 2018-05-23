@@ -61,8 +61,7 @@ declare global {
 
   namespace StencilComponents {
     interface MyPluginNrOne {
-      'first': string;
-      'last': string;
+
     }
   }
 
@@ -85,9 +84,7 @@ declare global {
   }
   namespace JSXElements {
     export interface MyPluginNrOneAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
-      'onBeeper'?: (event: CustomEvent) => void;
+
     }
   }
 }
