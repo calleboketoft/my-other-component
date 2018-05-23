@@ -11,7 +11,7 @@ export class ChildComponent {
   render() {
     return (
       <p>
-        Child component {this.name}
+        This is a child component inside the Web Component, this {this.name}
       </p>
     );
   }

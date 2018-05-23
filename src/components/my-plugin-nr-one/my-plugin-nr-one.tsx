@@ -10,7 +10,7 @@ export class MyPluginNrOneComponent {
   render() {
     return (
       <div>
-        Plugin nr one here
+        Plugin nr one here, <span class="bold">I'm a Web Component</span>
         <br />
         <button onClick={ (event: UIEvent) => this.handleClick(event) }>
           Click me!
@@ -28,6 +28,7 @@ export class MyPluginNrOneComponent {
 
   handleClick (event) {
     console.log(event)
+    alert('wow')
   }
 
   dataFromPlatform (data) {
