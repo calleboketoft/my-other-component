@@ -19,7 +19,9 @@
     "test": "jest --no-cache",
     "test.watch": "jest --watch --no-cache"
   },
-  "dependencies": {},
+  "dependencies": {
+    "plugin-comm": "github:calleboketoft/plugin-comm"
+  },
   "devDependencies": {
     "@stencil/core": "^0.9.1",
     "@stencil/dev-server": "latest",
