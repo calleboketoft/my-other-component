@@ -33,7 +33,7 @@ export class MyPluginNrOneComponent {
 
   componentDidUnload () {
     console.log('Plugin nr one: removed from DOM and now unregistering')
-    pluginComm.pluginUnregisterDataCallback('my-plugin-nr-one')
+    pluginComm.pluginUnregisterDataCallback(this.pluginId)
   }
 
   handleClick (event) {
