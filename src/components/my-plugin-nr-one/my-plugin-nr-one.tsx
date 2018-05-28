@@ -1,7 +1,5 @@
-import { Component } from '@stencil/core';
+import { Component, State } from '@stencil/core';
 import { pluginComm } from 'plugin-comm';
-
-let pluginId;
 
 @Component({
   tag: 'my-plugin-nr-one',
@@ -9,6 +7,8 @@ let pluginId;
   shadow: true
 })
 export class MyPluginNrOneComponent {
+  @State() pluginId
+
   render() {
     return (
       <div>
@@ -24,9 +24,9 @@ export class MyPluginNrOneComponent {
   }
 
   componentDidLoad() {
-    pluginId = pluginComm.pluginRegisterDataCallback('my-plugin-nr-one', this.dataFromPlatform.bind(this))
+    this.pluginId = pluginComm.pluginRegisterDataCallback('my-plugin-nr-one', this.dataFromPlatform.bind(this))
     console.log('registering plugin callback for "my-plugin-nr-one"')
-    console.log('pluginId: ', pluginId)
+    console.log(this.pluginId)
   }
 
   componentDidUnload () {
