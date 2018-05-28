@@ -26,6 +26,10 @@ export class MyPluginNrOneComponent {
     pluginComm.registerPluginDataCallback('my-plugin-nr-one', this.dataFromPlatform.bind(this))
   }
 
+  componentDidUnload () {
+    console.log('Plugin nr one: removed from DOM and now unregistering')
+  }
+
   handleClick (event) {
     console.log(event)
     alert('wow')

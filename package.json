@@ -2,14 +2,13 @@
   "name": "my-plugin-nr-one",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
+  "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
-  "module": "dist/esm/index.js",
   "files": [
     "dist/"
   ],
-  "browser": "dist/mypluginnrone.js",
   "scripts": {
     "build": "stencil build",
     "build:watch": "stencil build --dev --watch",
@@ -23,7 +22,7 @@
     "plugin-comm": "github:calleboketoft/plugin-comm"
   },
   "devDependencies": {
-    "@stencil/core": "^0.9.4",
+    "@stencil/core": "^0.9.5",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
