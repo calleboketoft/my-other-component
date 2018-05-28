@@ -14,6 +14,8 @@ export class MyPluginNrOneComponent {
       <div>
         Plugin nr one here, <span class="bold">I'm a Web Component</span>
         <br />
+        Plugin ID: { this.pluginId }
+        <br />
         <button onClick={ (event: UIEvent) => this.handleClick(event) }>
           Click me!
         </button>
