@@ -23,11 +23,12 @@ export class MyPluginNrOneComponent {
 
   componentDidLoad() {
     console.log('registering plugin callback for "my-plugin-nr-one"')
-    pluginComm.registerPluginDataCallback('my-plugin-nr-one', this.dataFromPlatform.bind(this))
+    pluginComm.pluginRegisterDataCallback('my-plugin-nr-one', this.dataFromPlatform.bind(this))
   }
 
   componentDidUnload () {
     console.log('Plugin nr one: removed from DOM and now unregistering')
+    pluginComm.pluginUnregisterDataCallback('my-plugin-nr-one')
   }
 
   handleClick (event) {
