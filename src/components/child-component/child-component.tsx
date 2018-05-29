@@ -1,7 +1,9 @@
 import { Component, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'child-component'
+  tag: 'child-component',
+  styleUrl: 'child-component.css',
+  shadow: true
 })
 export class ChildComponent {
 
@@ -10,7 +12,7 @@ export class ChildComponent {
 
   render() {
     return (
-      <p>
+      <p class="child-background">
         This is a child Web Component inside the plugin Web Component: {this.name}
       </p>
     );
