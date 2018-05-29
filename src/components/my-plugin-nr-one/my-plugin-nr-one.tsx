@@ -8,19 +8,22 @@ import { pluginComm } from 'plugin-comm';
 })
 export class MyPluginNrOneComponent {
   @State() pluginId
+  @State() messageFromPlatform
 
   render() {
     return (
       <div>
-        Plugin nr one here, <span class="bold">I'm a Web Component</span>
+        <span class="bold">Plugin nr one here</span>, I'm a Web Component
         <br />
-        Plugin ID: { this.pluginId }
+        <span class="bold">Plugin ID:</span> { this.pluginId }
+        <br />
+        <span class="bold">Incoming message from platform:</span> { this.messageFromPlatform }
         <br />
         <button onClick={ (event: UIEvent) => this.handleClick(event) }>
           Click me!
         </button>
         <br />
-        <child-component name="works great"></child-component>
+        <child-component name="forwarded data"></child-component>
       </div>
     );
   }
@@ -43,5 +46,6 @@ export class MyPluginNrOneComponent {
 
   dataFromPlatform (data) {
     console.log('Data received from platform in plugin one', data)
+    this.messageFromPlatform = JSON.stringify(data)
   }
 }
