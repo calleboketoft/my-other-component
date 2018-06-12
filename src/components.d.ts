@@ -28,7 +28,7 @@ declare global {
 
 import {
   LimeWebComponentPlatform,
-} from 'lime-web-component-platform';
+} from 'lime-web-component-platform/lime-web-component-platform.interface';
 
 declare global {
 

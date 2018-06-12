@@ -1,5 +1,5 @@
 import { Component, Prop } from '@stencil/core';
-import { LimeWebComponentPlatform } from 'lime-web-component-platform'
+import { LimeWebComponentPlatform } from 'lime-web-component-platform/lime-web-component-platform.interface'
 
 @Component({
   tag: 'my-plugin-nr-one',
