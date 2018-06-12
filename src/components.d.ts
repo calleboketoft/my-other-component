@@ -26,6 +26,9 @@ declare global {
   interface HTMLAttributes {}
 }
 
+import {
+  PluginCommPlatform,
+} from 'plugin-comm/src/plugin-comm-platform.interface';
 
 declare global {
 
@@ -64,7 +67,7 @@ declare global {
 
   namespace StencilComponents {
     interface MyPluginNrOne {
-      'pluginId': any;
+      'pluginCommPlatform': PluginCommPlatform;
     }
   }
 
@@ -87,7 +90,7 @@ declare global {
   }
   namespace JSXElements {
     export interface MyPluginNrOneAttributes extends HTMLAttributes {
-      'pluginId'?: any;
+      'pluginCommPlatform'?: PluginCommPlatform;
     }
   }
 }
