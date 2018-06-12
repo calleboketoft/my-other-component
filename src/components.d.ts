@@ -27,8 +27,8 @@ declare global {
 }
 
 import {
-  PluginCommPlatform,
-} from 'plugin-comm/src/plugin-comm-platform.interface';
+  LimeWebComponentPlatform,
+} from 'lime-web-component-platform';
 
 declare global {
 
@@ -67,7 +67,7 @@ declare global {
 
   namespace StencilComponents {
     interface MyPluginNrOne {
-      'pluginCommPlatform': PluginCommPlatform;
+      'limeWebComponentPlatform': LimeWebComponentPlatform;
     }
   }
 
@@ -90,7 +90,7 @@ declare global {
   }
   namespace JSXElements {
     export interface MyPluginNrOneAttributes extends HTMLAttributes {
-      'pluginCommPlatform'?: PluginCommPlatform;
+      'limeWebComponentPlatform'?: LimeWebComponentPlatform;
     }
   }
 }
