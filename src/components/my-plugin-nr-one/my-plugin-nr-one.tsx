@@ -1,12 +1,13 @@
 import { Component, Prop } from '@stencil/core';
 import { LimeWebComponentPlatform } from 'lime-web-component-platform/lime-web-component-platform.interface'
+import { LimeWebComponent } from 'lime-web-component-platform/lime-web-component.interface'
 
 @Component({
   tag: 'my-plugin-nr-one',
   styleUrl: 'my-plugin-nr-one.css',
   shadow: true
 })
-export class MyPluginNrOneComponent {
+export class MyPluginNrOneComponent implements LimeWebComponent{
   @Prop() limeWebComponentPlatform: LimeWebComponentPlatform
 
   render() {
