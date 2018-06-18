@@ -1,0 +1,4 @@
+{
+  "name": "my-plugin-nr-one",
+  "script": "http://localhost:3000/mypluginnrone.js"
+}
