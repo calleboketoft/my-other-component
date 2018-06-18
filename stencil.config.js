@@ -5,11 +5,6 @@ exports.config = {
       type: 'dist'
     },
     {
-      type: 'www',
-      serviceWorker: false,
-      buildDir: '../..'
-    },
-    {
       type: 'www'
     }
   ]
