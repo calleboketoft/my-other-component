@@ -5,7 +5,8 @@ exports.config = {
       type: 'dist'
     },
     {
-      type: 'www'
+      type: 'www',
+      serviceWorker: false
     }
   ]
 };
